@@ -1,6 +1,5 @@
 import os
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '$6ypi=3k1lmql+6m1@l**xy(_2p57q9qts^kc77%rk1x8q!+xz'
@@ -90,7 +89,9 @@ EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Istanbul'
+
+NUMBER_OF_POST: int = 10
 
 USE_I18N = True
 
