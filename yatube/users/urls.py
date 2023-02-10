@@ -1,11 +1,9 @@
-from django.contrib.auth.views import (LoginView, LogoutView,
-                                       PasswordChangeDoneView,
-                                       PasswordChangeView,
-                                       PasswordResetCompleteView,
-                                       PasswordResetConfirmView,
-                                       PasswordResetDoneView,
-                                       PasswordResetView,
-                                       )
+from django.contrib.auth.views import (
+    LoginView, LogoutView, PasswordChangeDoneView,
+    PasswordChangeView, PasswordResetCompleteView,
+    PasswordResetConfirmView, PasswordResetDoneView,
+    PasswordResetView,
+)
 from django.urls import path, reverse_lazy
 
 from . import views
@@ -59,6 +57,6 @@ urlpatterns = [
         'reset/done/',
         PasswordResetCompleteView.as_view(
             template_name='users/password_reset_confirm.html'),
-        name='password_reset_confirm'
+        name='password_reset_confirm',
     ),
 ]

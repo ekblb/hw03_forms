@@ -1,6 +1,6 @@
 <article>
   <ul>
-    {% if is_profile %}
+    {% if not hide_link %}
        <li>
         Автор: {{ post.author.get_full_name }}
         <a href="{% url 'posts:profile' post.author %}">все посты пользователя</a>
@@ -13,8 +13,8 @@
   <p>{{ post.text|linebreaksbr }} </p>
   <a href="{% url 'posts:post_detail' post.id %}">подробная информация</a>
   <p>
-  {% if not group and post.group %}
-    <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы {{ post.group }}</a>
+  {% if post.group.title %}
+    <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы {{ post.group.title }}</a>
   </p>
   {% endif %}
 </article>
